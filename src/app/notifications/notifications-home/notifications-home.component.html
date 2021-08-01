@@ -1,0 +1,22 @@
+<a routerLink="/create">Create Notification</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let source of dataSource">
+      <td>{{source.title}}</td>
+      <td>
+        <button routerLink="/view/{{source.id}}" type="button" mat-raised-button>View</button>
+
+        <button routerLink="/edit/{{source.id}}" type="button" mat-raised-button>Edit</button>
+
+        <button (click)="deleteNotification(source)" type="button" mat-raised-button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

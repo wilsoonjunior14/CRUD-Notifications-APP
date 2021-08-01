@@ -1,0 +1,19 @@
+<form >
+    <mat-form-field style="margin: 5px;">
+      <mat-label>Title</mat-label>
+      <input [(ngModel)]="notification.title" matInput maxlength="255" required name="title">
+    </mat-form-field>
+  
+    <mat-form-field style="margin: 5px;">
+      <mat-label>Description</mat-label>
+      <input [(ngModel)]="notification.description" matInput maxlength="255" required name="description">
+    </mat-form-field>
+  
+    <mat-form-field style="margin: 5px;">
+      <mat-label>Post Date</mat-label>
+      <input [(ngModel)]="notification.postDate" matInput maxlength="10" min="10" pattern="/\d{4}-\d{2}-\d{2}/g" required name="postDate">
+    </mat-form-field>
+  
+    <button type="button" (click)="createNotification()" mat-raised-button>Salvar</button>
+  </form>
+  
