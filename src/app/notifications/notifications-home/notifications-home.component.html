@@ -20,3 +20,9 @@
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="filters.total > 0">
+  Page {{filters.page}} of {{filters.totalPages}} | Total: {{filters.total}}
+  <button (click)="setPage(-1)" type="button" mat-raised-button><</button>
+  <button (click)="setPage(1)" type="button" mat-raised-button>></button>
+</div>

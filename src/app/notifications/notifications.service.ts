@@ -12,9 +12,9 @@ export class NotificationsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAll() : Observable<Object> {
+  public getAll(data: any) : Observable<Object> {
     return this.httpClient
-      .get(this.ENDPOINT);
+      .post(this.ENDPOINT + "/search", data);
   }
 
   public getById(id: number) : Observable<Object> {
